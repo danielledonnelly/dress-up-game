@@ -6,10 +6,9 @@ const Avatar = ({ selectedOptions }) => {
       className="avatar"
       style={{
         position: "relative",
-        width: "600px",
-        height: "1000px",
+        width: "400px", // Enlarged to fit better on the screen
+        height: "667px", // Maintain aspect ratio with 1:1.667 scale
         margin: "auto",
-        border: "1px solid #ddd",
       }}
     >
       {skin && <img src={`/src/assets/${skin}`} alt="Skin" style={{ position: "absolute" }} />}

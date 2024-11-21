@@ -1,45 +1,42 @@
 import { useState } from "react";
 
-const categories = ["skin", "shoe", "outfit", "hair", "accessory"];
+const categories = ["background", "skin", "shoe", "outfit", "hair", "accessory"];
 
 const Closet = ({ onSelect }) => {
   const [activeCategory, setActiveCategory] = useState("skin");
 
-  const options = Array.from({ length: 8 }, (_, i) => `${activeCategory}-${i + 1}.png`);
+  const options = Array.from({ length: activeCategory === "background" ? 6 : 6 }, (_, i) =>
+    `${activeCategory}-${i + 1}.png`
+  );
 
   return (
     <div
       className="closet"
       style={{
-        width: "300px",
-        height: "100vh",
-        overflowY: "auto",
-        background: "#f8f9fa",
-        borderLeft: "1px solid #ddd",
-        padding: "10px",
+        display: "flex",
+        height: "100%",
+        gap: "10px",
+        justifyContent: "flex-end",
+        alignItems: "center",
       }}
     >
-      {/* Category Buttons */}
-      <div style={{ display: "flex", flexDirection: "column", gap: "10px", marginBottom: "20px" }}>
-        {categories.map((category) => (
-          <button
-            key={category}
-            style={{
-              padding: "10px",
-              background: category === activeCategory ? "#00beef" : "#ddd",
-              border: "none",
-              borderRadius: "5px",
-              cursor: "pointer",
-            }}
-            onClick={() => setActiveCategory(category)}
-          >
-            {category}
-          </button>
-        ))}
-      </div>
-
-      {/* Options for the Active Category */}
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "10px" }}>
+      {/* Options Panel */}
+      <div
+        className="options-panel"
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(2, 1fr)",
+          gap: "10px",
+          width: "300px",
+          height: "80vh",
+          background: "#f8f9fa",
+          border: "1px solid #ddd",
+          borderRadius: "10px",
+          padding: "10px",
+          boxSizing: "border-box",
+          overflow: "hidden", // No scrolling
+        }}
+      >
         {options.map((option) => (
           <img
             key={option}
@@ -54,6 +51,38 @@ const Closet = ({ onSelect }) => {
             }}
             onClick={() => onSelect(activeCategory, option)}
           />
+        ))}
+      </div>
+
+      {/* Category Buttons */}
+      <div
+        className="categories-panel"
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          gap: "10px",
+          width: "150px",
+          height: "80vh",
+          background: "#f8f9fa",
+          border: "1px solid #ddd",
+          borderRadius: "10px",
+          padding: "10px",
+        }}
+      >
+        {categories.map((category) => (
+          <button
+            key={category}
+            style={{
+              padding: "10px",
+              background: category === activeCategory ? "#00beef" : "#ddd",
+              border: "none",
+              borderRadius: "5px",
+              cursor: "pointer",
+            }}
+            onClick={() => setActiveCategory(category)}
+          >
+            {category}
+          </button>
         ))}
       </div>
     </div>
