@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const categories = ["background", "skin", "shoe", "outfit", "hair", "accessory"];
+const categories = ["skin", "hair", "outfit", "shoe", "accessory", "background"];
 
 const Closet = ({ onSelect }) => {
   const [activeCategory, setActiveCategory] = useState("skin");

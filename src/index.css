@@ -36,3 +36,38 @@ button {
   object-fit: cover;
 }
 
+.closet {
+  display: flex;
+  height: 80vh; /* Set a fixed height for both sections */
+  gap: 10px;
+  justify-content: flex-end;
+  align-items: stretch; /* Ensure both sections have the same height */
+}
+
+.options-panel {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  width: 300px;
+  height: 100%; /* Match height with categories section */
+  background: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+  overflow: hidden; /* Prevent scrolling */
+}
+
+.categories-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 150px;
+  height: 100%; /* Match height with options panel */
+  background: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-right: 10px;
+}
