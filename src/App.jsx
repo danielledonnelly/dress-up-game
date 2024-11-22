@@ -21,7 +21,7 @@ const App = () => {
       className="app"
       style={{
         backgroundImage: selectedOptions.background
-          ? `url(/src/assets/${selectedOptions.background})`
+          ? `url(/dress-up-game/public/assets/${selectedOptions.background})`
           : "none",
         backgroundSize: "cover",
         backgroundPosition: "center",
