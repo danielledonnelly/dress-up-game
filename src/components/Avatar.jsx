@@ -11,12 +11,12 @@ const Avatar = ({ selectedOptions }) => {
         margin: "auto",
       }}
     >
-      {skin && <img src={`/dress-up-game/assets/${skin}`} alt="Skin" style={{ position: "absolute" }} />}
-      {shoe && <img src={`/assets/${shoe}`} alt="Shoe" style={{ position: "absolute" }} />}
-      {outfit && <img src={`dress-up-game/assets/${outfit}`} alt="Outfit" style={{ position: "absolute" }} />}
-      {hair && <img src={`dress-up-game/assets/${hair}`} alt="Hair" style={{ position: "absolute" }} />}
+      {skin && <img src={`./assets/${skin}`} alt="Skin" style={{ position: "absolute" }} />}
+      {shoe && <img src={`./assets/${shoe}`} alt="Shoe" style={{ position: "absolute" }} />}
+      {outfit && <img src={`./assets/${outfit}`} alt="Outfit" style={{ position: "absolute" }} />}
+      {hair && <img src={`./assets/${hair}`} alt="Hair" style={{ position: "absolute" }} />}
       {accessory && (
-        <img src={`dress-up-game/assets/${accessory}`} alt="Accessory" style={{ position: "absolute" }} />
+        <img src={`./assets/${accessory}`} alt="Accessory" style={{ position: "absolute" }} />
       )}
     </div>
   );
