@@ -10,10 +10,13 @@ const Avatar = ({ selectedOptions }) => {
         height: "667px", // Maintain aspect ratio with 1:1.667 scale
         margin: "auto",
       }}
+      // No file paths are working so i just tried a bunch of different ones below
+      // Nothing's working
     >
-      {skin && <img src={`./assets/${skin}`} alt="Skin" style={{ position: "absolute" }} />}
-      {shoe && <img src={`./assets/${shoe}`} alt="Shoe" style={{ position: "absolute" }} />}
-      {outfit && <img src={`./assets/${outfit}`} alt="Outfit" style={{ position: "absolute" }} />}
+
+      {skin && <img src={`/assets/${skin}`} alt="Skin" style={{ position: "absolute" }} />}
+      {shoe && <img src={`dress-up-game/assets/${shoe}`} alt="Shoe" style={{ position: "absolute" }} />}
+      {outfit && <img src={`/dress-up-game/assets/${outfit}`} alt="Outfit" style={{ position: "absolute" }} />}
       {hair && <img src={`./assets/${hair}`} alt="Hair" style={{ position: "absolute" }} />}
       {accessory && (
         <img src={`./assets/${accessory}`} alt="Accessory" style={{ position: "absolute" }} />
