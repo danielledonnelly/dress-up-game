@@ -6,7 +6,7 @@
   "homepage": "https://danielledonnelly.github.io/dress-up-game",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build --base=/dress-up-game/",
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
