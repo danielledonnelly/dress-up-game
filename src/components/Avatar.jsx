@@ -1,5 +1,5 @@
 const Avatar = ({ selectedOptions }) => {
-  const { skin, shoe, outfit, hair, accessory } = selectedOptions;
+  const { skin, shoe, outfit, hair, accessory, } = selectedOptions;
 
   return (
     <div
@@ -13,12 +13,12 @@ const Avatar = ({ selectedOptions }) => {
       // No file paths are working so i just tried a bunch of different ones below
     >
 
-      {skin && <img src={`/assets/${skin}`} alt="Skin" style={{ position: "absolute" }} />}
-      {shoe && <img src={`dress-up-game/assets/${shoe}`} alt="Shoe" style={{ position: "absolute" }} />}
+      {skin && <img src={`/dress-up-game/assets/${skin}`} alt="Skin" style={{ position: "absolute" }} />}
+      {shoe && <img src={`/dress-up-game/assets/${shoe}`} alt="Shoe" style={{ position: "absolute" }} />}
       {outfit && <img src={`/dress-up-game/assets/${outfit}`} alt="Outfit" style={{ position: "absolute" }} />}
-      {hair && <img src={`./assets/${hair}`} alt="Hair" style={{ position: "absolute" }} />}
+      {hair && <img src={`/dress-up-game/assets/${hair}`} alt="Hair" style={{ position: "absolute" }} />}
       {accessory && (
-        <img src={`./assets/${accessory}`} alt="Accessory" style={{ position: "absolute" }} />
+        <img src={`/dress-up-game/assets/${accessory}`} alt="Accessory" style={{ position: "absolute" }} />
       )}
     </div>
   );
