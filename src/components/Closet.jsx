@@ -40,7 +40,7 @@ const Closet = ({ onSelect }) => {
         {options.map((option) => (
           <img
             key={option}
-            src={`./public/assets/${option}`}
+            src={`/assets/${option}`}
             alt={option}
             style={{
               width: "100%",
