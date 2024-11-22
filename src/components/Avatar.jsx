@@ -11,7 +11,6 @@ const Avatar = ({ selectedOptions }) => {
         margin: "auto",
       }}
       // No file paths are working so i just tried a bunch of different ones below
-      // Nothing's working
     >
 
       {skin && <img src={`/assets/${skin}`} alt="Skin" style={{ position: "absolute" }} />}
