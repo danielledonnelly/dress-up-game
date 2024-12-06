@@ -6,11 +6,11 @@ const Avatar = ({ selectedOptions }) => {
       className="avatar"
       style={{
         position: "relative",
-        width: "400px", // Enlarged to fit better on the screen
-        height: "667px", // Maintain aspect ratio with 1:1.667 scale
+        width: "400px", 
+        height: "667px", 
         margin: "auto",
       }}
-      // No file paths are working so i just tried a bunch of different ones below
+
     >
 
       {skin && <img src={`/dress-up-game/assets/${skin}`} alt="Skin" style={{ position: "absolute" }} />}
